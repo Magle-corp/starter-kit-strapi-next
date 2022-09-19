@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+
+  backend:
+    build: ./starter-strapi
+    volumes:
+      - ./starter-strapi:/app
+    ports:
+      - "1337:1337"
+    depends_on:
+      - db
+    environment:
+      WAIT_HOSTS: db:3306
+
+  db:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: database
+      MYSQL_ROOT_PASSWORD: root
+    command: --default-authentication-plugin=mysql_native_password
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '8081:80'
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+
+  frontend:
+    build: ./starter-next
+    volumes:
+      - ./starter-next:/app
+    ports:
+      - "3000:3000"
