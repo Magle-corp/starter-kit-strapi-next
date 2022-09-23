@@ -1,0 +1,29 @@
+{
+  "name": "starter-kit-strapi-next",
+  "version": "0.0.11",
+  "description": "Starter kit Strapi + Next",
+  "bin": "./bin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Magle-corp/starter-kit-strapi-next.git"
+  },
+  "keywords": [
+    "Docker",
+    "docker-compose",
+    "Strapi",
+    "Next",
+    "Nextjs",
+    "Typescript",
+    "MySQL",
+    "PHPMyAdmin"
+  ],
+  "author": "Magle-corp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Magle-corp/starter-kit-strapi-next/issues"
+  },
+  "homepage": "https://github.com/Magle-corp/starter-kit-strapi-next#readme"
+}
